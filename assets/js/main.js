@@ -6,12 +6,12 @@ console.log('Sample JavaScript HW#1');
  * Создайте переменные со значениями
  */
 // имя переменной: myNum, значение: 10
-// имя переменной: mStry, значение: 'строка'
+// имя переменной: myStr, значение: 'строка'
 // имя переменной: myBool, значение: true
 // имя переменной: myArr, значения: 1, 2, 3, 4, 5
 // имя переменной myObj, значения: first: 'First Name', last: 'Last Name'
 var myNum = 10;
-var mStry = 'строка';
+var myStr = 'строка';
 var myBool = true;
 var myArr = [1, 2, 3, 4, 5];
 var myObj = {
@@ -20,7 +20,7 @@ var myObj = {
 };
 console.log('Результат задания 1:');
 console.log('myNum = ', myNum);
-console.log('mStry = ', mStry);
+console.log('myStr = ', myStr);
 console.log('myBool = ', myBool);
 console.log('myArr = ', myArr);
 console.log('myObj = ', myObj);
@@ -75,8 +75,8 @@ console.log('myTest+10 : ', myTest);
 myTest -=myNum * 2;
 console.log('myTest-10*2 : ',myTest);
 // *=
-myTest *=(myNum - 5);
-console.log('myTest*(10-5) : ',myTest);
+myTest *=myNum;
+console.log('myTest*10 : ',myTest);
 // /=
 myTest /=myNum;
 console.log('myTest/10 : ',myTest);
@@ -111,9 +111,10 @@ console.log('myPow : ', myPow);
  */
 console.log('Результат задания 6:');
 var strObj = {
-  str: 'Мама мыла раму, рама мыла маму',
+  str: 'Мама мыла раму, рама мыла маму'
 };
-strObj.length = (strObj.str).length;
+strObj.length = strObj.str.length;
+
 console.log('strObj :', strObj);
 // strObj
 
@@ -127,7 +128,7 @@ console.log('strObj :', strObj);
 
 // isRamaPos
 console.log('Результат задания 7:');
-var isRamaPos = (strObj.str).indexOf('рама');
+var isRamaPos = strObj.str.indexOf('рама');
 console.log('isRamaPos :', isRamaPos);
 
 /*
@@ -147,7 +148,7 @@ var newWords = ['моет', 'Рама', 'крокодил', 'держит'];
 
 if (oldWords.length === newWords.length) {
   var i=0;
-  strReplace = (strObj.str);
+  strReplace = strObj.str;
 
   while (i < oldWords.length) {
     strReplace = strReplace.replace(oldWords[i], newWords[i++]);
