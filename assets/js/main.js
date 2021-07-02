@@ -51,7 +51,7 @@ console.log(userObj.fullName());
 
 // console.log(defUpperStr()); // DEFAULT TEXT
 function defUpperStr (someText) {
-  return (someText || 'defauln text').toUpperCase();
+  return (someText || 'default text').toUpperCase();
 };
 console.log(defUpperStr('My text'));
 console.log(defUpperStr(''));
@@ -81,7 +81,7 @@ console.log(defUpperStr(''));
 
 function evenFn(n) {
   var arr=[];
-  for (let i = 1; i <= n; i++) {
+  for (var i = 1; i <= n; i++) {
     
     ((i % 2) === 0) && (arr[i / 2 - 1] = i);
 
