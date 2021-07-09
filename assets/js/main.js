@@ -1,294 +1,271 @@
-console.log('Sample JavaScript #3 HW #17');
+
+console.log('Sample JavaScript #4 HW #18');
+/* eslint-disable multiline-comment-style */
 
 /*
  * #1
  *
- * Создайте функцию counter(), которая должна реализовать счетчик с помощью замыкания:
- * функция может принимать число в качестве аргумента counter(n)
- * если число передано в функцию – счет начинается с указанного числа
- * если нет – то счет продолжается
+ * Создайте функцию wordsList(str, subStr), принимающую два параметра:
+ * строку текста произвольной длины и подстроку для поиска.
+ * Функция должна вернуть коллекцию уникальных слов в нижнем регистре, без символов-разделителей, т.е.:
+ * из строки str необходимо удалить все следующие символы: . , ! ? ; : "
+ * привести строку к нижнему регистру
+ * получить коллекцию уникальных, неповторяющихся слов, в которых содержится подстрока,
+ * переданная в параметре subStr.
  */
-var counter = (function(n) {
-  var count = 0;
-  return function(n) {
-    if (n !== undefined) 
-      if (Number.isInteger(n) && (n > -1)) count = n;
-    return count++;
-  }
-}());
-console.log('Task 1');
-console.log(counter()); // 0
-console.log(counter()); // 1
-console.log(counter(100)); // 100
-console.log(counter()); // 101
-console.log(counter(500)); // 500
-console.log(counter()); // 501
-console.log(counter(0)); // 0
-console.log(counter()); // 1
+let myLongStr = 'Lorem". ipsum, dolor! sit? amet: consectetur; adipisicing elit. Dolores quas alias animi inventore delectus quo non, fugit officiis a repellendus facere quae perferendis quos doloremque in, accusantium eum sint corrupti similique voluptatibus omnis mollitia id ex. Adipisci temporibus laborum fugit aperiam, minima recusandae nemo! Voluptas, fugiat sunt saepe dignissimos quam possimus vero voluptatibus quas commodi ipsa vitae, est error voluptate ex cum? Ab, numquam doloremque sunt id molestias explicabo tenetur? Corporis, quisquam voluptatem doloremque itaque est quod impedit, commodi illo eius dicta, enim reiciendis quidem minus tempora sapiente ratione. Repudiandae tempora officia voluptate nam cum dolore corrupti dolorem asperiores quisquam dicta, officiis distinctio ad possimus earum rerum ipsam veritatis enim voluptatum ea numquam doloremque deleniti sapiente velit maxime. Temporibus nostrum perspiciatis molestiae tempora, quo molestias numquam atque obcaecati unde quos itaque modi fugiat dolorem non rerum harum, esse, impedit voluptas minus? Deleniti atque reiciendis voluptate aut consequuntur blanditiis dolores dolorem magni adipisci eius unde, rerum explicabo labore molestias non et exercitationem mollitia iure. Est libero recusandae et, animi sunt a blanditiis consequuntur nemo iste laudantium quos sint ipsa ad possimus sequi dolor ipsum mollitia facilis? Officia quasi rerum atque esse voluptatum quae eos! Sequi eum repellat, molestiae enim soluta quos, tempora recusandae nulla facere quae assumenda harum modi laboriosam. Earum error aspernatur explicabo? Earum non, nesciunt distinctio quod dolores facere, placeat consectetur illum omnis eligendi ullam! Totam laudantium voluptates esse inventore molestias sapiente corrupti temporibus iure! Explicabo laudantium repellendus ullam laboriosam. Odit nostrum sit autem at laboriosam? Autem cupiditate facilis dolore nemo perferendis facere! Maiores iure voluptas obcaecati nihil. Rerum dignissimos fugit a dolorem earum soluta, ut at ullam repudiandae sunt, voluptatum fugiat reiciendis distinctio ipsum, neque magni mollitia laborum perferendis nihil voluptatem adipisci assumenda aperiam! Libero natus fuga fugiat corrupti recusandae vel asperiores earum qui explicabo doloremque, magni error expedita dolor quia eos omnis nostrum facilis fugit molestiae culpa placeat eius! Fuga cum obcaecati esse, inventore cumque quibusdam fugiat beatae? Delectus rerum vel repellat fugiat eius id doloribus. Suscipit hic, vel nobis optio obcaecati cupiditate ullam? Facere, vitae natus, reprehenderit debitis, ea reiciendis doloribus possimus repudiandae nihil accusamus iusto neque ex voluptate nam fugiat voluptates atque facilis sed. Vitae non iure placeat, nam doloribus temporibus consectetur esse distinctio sit tempore, corrupti vero amet odit vel nostrum voluptatum! Ipsum nihil omnis tenetur debitis, sit eligendi! Suscipit vitae quae nemo eveniet veritatis. Perspiciatis modi expedita placeat aut voluptate officiis atque quasi tenetur nulla animi! Minus omnis nesciunt beatae ullam itaque facilis a consequatur, at fugiat natus placeat inventore vitae, cumque quo ipsum? Deserunt suscipit velit dolor nemo quasi deleniti nisi, temporibus explicabo laboriosam, corrupti, ad quibusdam ratione praesentium. Quo totam, qui libero, id iusto, asperiores vitae dolorem perferendis minus distinctio animi repudiandae. Reprehenderit maxime eum asperiores velit praesentium nulla soluta minus at ad consequuntur, error deleniti non corrupti voluptatibus ullam repellat quod ipsa tempora ut! Nemo corrupti aut quia corporis odit maxime laudantium nam unde perspiciatis est, dicta perferendis debitis et quod deleniti! Distinctio, sapiente ducimus ipsam id cumque eveniet totam veritatis nisi ex quis amet quod, quisquam fugit est perferendis quia culpa consequatur eaque incidunt. Rem repudiandae voluptatibus adipisci ad soluta deserunt sapiente culpa saepe veritatis similique illo veniam ipsum ducimus nisi, iste est accusantium unde nesciunt laboriosam itaque beatae eius exercitationem neque quam. In aspernatur totam doloribus quisquam voluptatem commodi, nostrum reiciendis, esse maxime ipsa laudantium ut sed quos. Repudiandae odio sunt minus reprehenderit, laudantium aliquam ea aperiam, voluptas placeat nemo harum excepturi commodi nostrum perspiciatis aut iusto. Accusamus ad voluptatem eaque, distinctio accusantium unde voluptatum esse autem molestiae obcaecati numquam. Cumque sint, est temporibus, quia animi iste quo repudiandae, laudantium voluptatibus ducimus architecto. Vel doloribus obcaecati perspiciatis voluptatum voluptatibus molestias sit, sed reiciendis esse ea exercitationem delectus quos officiis aliquid porro architecto magni sint temporibus illo aspernatur reprehenderit deserunt deleniti doloremque? Aliquam, ut minima. Architecto et, magnam dignissimos nam animi facilis? Recusandae quis ex repellat, voluptatibus veritatis modi beatae ea provident? Excepturi eligendi laudantium beatae dolores eum, accusantium eveniet ipsa quidem voluptas repellendus illo veniam magnam saepe asperiores quos modi in necessitatibus officiis tenetur dolorem, minima voluptate similique praesentium! Necessitatibus sint, itaque impedit, laboriosam, ratione blanditiis at dolor quos aliquam nobis nemo amet quia. Nostrum sit nesciunt, illum deleniti, aliquid, aut ipsa sapiente officia molestias ipsam modi. Quod cupiditate vel quidem iure nemo? Quisquam beatae natus est non amet nostrum dicta reiciendis expedita. Consequatur quo pariatur voluptatem voluptatum sed velit molestiae nemo odio sequi in? Soluta laboriosam ipsam incidunt architecto pariatur, harum molestiae dignissimos quaerat ducimus, dolorem autem qui aliquam doloremque tenetur itaque optio fuga, iusto officia at? Esse blanditiis veritatis voluptas, similique, ipsum, voluptate illum beatae ducimus magni perferendis fuga ea? Est voluptatum culpa delectus voluptatibus doloribus recusandae porro veritatis, molestiae magni soluta, possimus quidem voluptas suscipit obcaecati dolores voluptatem neque, asperiores labore corrupti dicta. Consequatur eius, inventore autem doloremque recusandae quae! Neque facere laudantium blanditiis inventore temporibus nostrum praesentium aperiam perspiciatis dicta perferendis ullam ab impedit adipisci dolorem exercitationem dignissimos ipsum minus incidunt tempore in, illo placeat odio dolorum. Maiores sed est id officiis praesentium ratione cumque ut iste alias laboriosam. Repellendus deserunt ut optio exercitationem ab repudiandae ex doloremque nisi magni numquam accusantium recusandae nesciunt sint quisquam odio, eum aliquam et excepturi culpa praesentium nam laudantium soluta dolorem saepe? Dicta hic sint totam temporibus expedita iste velit, minus blanditiis similique! Nemo quam natus explicabo voluptas perspiciatis ex molestias blanditiis magnam quibusdam, consequatur culpa ducimus facere soluta accusamus porro ratione velit fuga eaque. Natus consequuntur odit dolore illo totam minima, cum explicabo expedita debitis aperiam, tempore ducimus eum inventore odio assumenda atque, recusandae error. Doloribus omnis voluptate fugit ad quam a, mollitia culpa commodi libero vero delectus corporis fuga blanditiis nesciunt aut porro incidunt, iure dolore placeat necessitatibus odio quaerat iste. Necessitatibus enim earum praesentium tenetur, temporibus pariatur recusandae perferendis reiciendis numquam consequuntur alias non. Debitis commodi quia, magni minus quaerat aliquam assumenda repudiandae doloribus consectetur ipsam sapiente animi! Dolorem commodi tempore, quos reprehenderit ducimus adipisci cum quia maiores tenetur ex modi quibusdam incidunt. Minima, amet?';
+let wordsList = function(str, subStr) {
+  let res = new Set();
+  let symbForDell = ['.', ',', '!', '?', ';', ':', '"'];
+  let workStr = str.slice();
+  for (var i = 0; i < symbForDell.length; i++) {
+    workStr = delAllSubstr(workStr, symbForDell[i]);
+  };
+  let workStrArr =  workStr.toLowerCase().split(' ').filter(item => (item.indexOf(subStr) > -1));
+  workStrArr.forEach(item => res.add(item));
+  return res;
+};
+let delAllSubstr = function(str, substr) {
+  if (str.indexOf(substr) > -1)
+    return str = delAllSubstr(str.replace(substr, ''), substr);
+   return str;
+};
+
+console.log(wordsList(myLongStr, 'lore')); // {"lorem", "dolores", "doloremque", "dolore", "dolorem"}
+console.log(wordsList(myLongStr, 'no')); // {"non", "nostrum", "nobis"}
+console.log(wordsList(myLongStr, 'rep')); // {"repellendus", "repudiandae", "repellat", "reprehenderit"}
+
 
 /*
  * #2
  *
- * Создайте функцию counting, которая должна реализовать три метода с помощью замыкания:
- * первоначальное значение счетчика – 0
- * counting.value() – возвращает значение счетчика
- * counting.value(n) – устанавливает значение счетчика, возвращает новое значение
- * counting.increment() – увеличивает значение счетчика на 1
- * counting.decrement() – уменьшает значение счетчика на 1
+ * Создайте функцию getLocalDate(date, isSeconds, isISO), которая будет принимать любую
+ * дату от конструктора new Date и преобразовывать ее в следующие форматы в зависимости от параметров:
+ * getLocalDate(date)              → dd.mm.yyyy, hh:mm,    например: 16.07.2019, 00:15
+ * getLocalDate(date, true)        → dd.mm.yyyy, hh:mm:ss, например: 16.07.2019, 00:15:32
+ * getLocalDate(date, false, true) → yyyy-mm-dd, hh:mm,    например: 2019-06-02, 00:15
+ * getLocalDate(date, true, true)  → yyyy-mm-dd, hh:mm:ss, например: 2019-06-02, 00:15:32
+ * date – любая дата из конструктора new Date().
+ * isSeconds – опциональный параметр для отображения секунд в дате.
+ * isISO – опциональный параметр переключения формата даты.
  */
 
-let counting = (function(n) {
-  let count = 0;
-  return {
-    increment() {
-      count++;
-    },
-    decrement() {
-      count--;
-    }, 
-    value (n) {
-    if (n!==undefined) count = n;
-    return count;
-    }
+
+let myDate = new Date();
+let getLocalDate = function(date, isSeconds, isISO) {
+  let divider = new Map();
+  divider.set(false, '.');
+  divider.set(true, '-');
+  let res;
+  if (date instanceof Date) {
+    let year = date.getFullYear();
+    let month =date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : `${date.getMonth() + 1}`;
+    let days = date.getDate() < 10 ? `0${date.getDate()}` : `${date.getDate()}`;
+    let hour = date.getHours() < 10 ? `0${date.getHours()}` : `${date.getHours()}`;
+    let minute = date.getMinutes() < 10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`;
+    let second = date.getSeconds() < 10 ? `0${date.getSeconds()}` : `${date.getSeconds()}`;
+   
+    if (isISO === true) res = `${year}${divider.get(isISO)}${month}${divider.get(isISO)}${days}, ${hour}:${minute}`
+      else {
+        isISO = false;
+        res = `${days}${divider.get(isISO)}${month}${divider.get(isISO)}${year}, ${hour}:${minute}`;
+      };
+    if (isSeconds === true) res = res +`:${second}`;
   };
-}());
-console.log('Task 2');
-// console.log(counting.value()); // 0
+  return res;
+};
+// console.log(getLocalDate(myDate)); // 16.07.2019, 00:15
+// console.log(getLocalDate(myDate, true)); // 16.07.2019, 00:15:32
+// console.log(getLocalDate(myDate, false, true)); // 2019-06-02, 00:15
+// console.log(getLocalDate(myDate, true, true)); // 2019-06-02, 00:15:32
+// console.log(getLocalDate(new Date(123456))); // 01.01.1970, 03:02
+// console.log(getLocalDate(new Date(123456), true)); // 01.01.1970, 03:02:03
+// console.log(getLocalDate(new Date(123456), false, true)); // 1970-01-01, 03:02
+// console.log(getLocalDate(new Date(123456), true, true)); // 1970-01-01, 03:02:03
 
-// counting.increment();
-
-// counting.increment();
-
-// counting.increment();
-
-// console.log(counting.value()); // 3
-
-// counting.decrement();
-
-// counting.decrement();
-
-// console.log(counting.value()); // 1
-
-// console.log(counting.value(100)); // 100
-
-// counting.decrement();
-
-// console.log(counting.value()); // 99
-
-// console.log(counting.value(200)); // 200
-
-// counting.increment();
-
-// console.log(counting.value()); // 201
+// тестирование
+// console.log(getLocalDate(new Date(123456)) === '01.01.1970, 03:02');
+// console.log(getLocalDate(new Date(123456), true) === '01.01.1970, 03:02:03');
+// console.log(getLocalDate(new Date(123456), false, true) === '1970-01-01, 03:02');
+// console.log(getLocalDate(new Date(123456), true, true) === '1970-01-01, 03:02:03');
+// console.log(getLocalDate(new Date(1999999123456)) === '18.05.2033, 06:18');
+// console.log(getLocalDate(new Date(1999999123456), true) === '18.05.2033, 06:18:43');
+// console.log(getLocalDate(new Date(1999999123456), false, true) === '2033-05-18, 06:18');
+// console.log(getLocalDate(new Date(1999999123456), true, true) === '2033-05-18, 06:18:43');
 
 /*
  * #3
  *
- * Создайте функцию myPow(a, b, myPrint). Внутри реализуйте рекурсию для подсчета результата возведения числа a в степень b.
- * функция myPrint(a, b, res) – глобальная функция, которая должна генерировать из параметров a, b, res строку вида 'a^b=res' и возвращать ее
- * myPrint() должна быть передана в myPow() как параметр и вызвана внутри как callback-функция
- * функция myPow() в качестве возвращаемого значения принимает результат myPrint()
- * Например:
- * console.log(myPow(3, 4, myPrint)); // 3^4=81
- * console.log(myPow(2, 3, myPrint)); // 2^3=8
+ * Создайте функцию getWeekDay(date), которая принимает дату в виде строки в формате 'yyyy-mm-dd'
+ * и выводит текущий день недели: "понедельник", "вторник", … "воскресенье".
  */
-let myPow = function(a, b, f) { 
-  let Pow = function(a1, b1) {  
-    if (b1 > 1) {return a *= Pow(a1, (b1 - 1))
-    } else return a1;
-  };
-  return f(a, b, Pow(a, b));
+let getWeekDay = function(date) {
+  const dayNames = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+  var mydate = new Date(date);
+  return dayNames[mydate.getDay()];
 };
 
-let myPrint = function(a, b, res) {
-  let str = `${a}^${b}=${res}`;
-  return str;
-};
-console.log('Task 3');
-console.log(myPow(3, 4, myPrint)); // 3^4=81
-console.log(myPow(2, 3, myPrint)); // 2^3=8
+console.log('3 ---- getWeekDay')
+console.log(getWeekDay('2019-01-30')); // среда
+console.log(getWeekDay('2019-07-16')); // вторник
+console.log(getWeekDay('2019-07-27')); // суббота
+
 
 /*
  * #4
  *
- * Создайте несколько однотипных объектов для описания автомобиля. Соблюдайте следующие правила, используйте следующие поля:
- * имя объекта car – обязательно и необходимое для тестирования, дальнейшее именование объектов – на ваше усмотрение
- * car.engine – объем двигателя, числовое поле
- * car.model – модель авто, строка
- * car.name – бренд авто, строка
- * car.year – год выпуска, число
- * car.used – строка для описания состояния авто, допускаются значения 'used' и 'new'
- *
+ * Напишите функцию, getLocalDay(date) которая возвращает день недели для даты date.
+ * День нужно возвратить в европейской нумерации, т.е. понедельник имеет номер 1, вторник номер 2, …, воскресенье – номер 7.
+ */
+
+let getLocalDay = function(date) {
+  var mydate = new Date(date);
+  let weekDay =mydate.getDay();
+  if (weekDay === 0) weekDay = 7;
+  return weekDay;
+};
+console.log('4 ---- getLocalDay')
+console.log(getLocalDay('2019-07-16')); // 2
+console.log(getLocalDay('2019-07-25')); // 4
+console.log(getLocalDay('2019-07-27')); // 6
+console.log(getLocalDay('1976-05-30')); // 6
+
+/*
  * #5
  *
- * Для созданных ранее объектов определите метод info(), используя ключевое слово this.
- * данный метод должен формировать и возвращать строку с полной информацией об автомобиле, например:
- * Chevrolet Lacetti, 2000cc, year 2010, used
- * Infinite FX50 AWD, 5000cc, year 2019, new
- * пробелы, запятые, символы cc и текст – имеют значение и проверяются при тестировании кода
- *
+ * Создайте функцию getDateAgo(date, days), которая возвращает дату,
+ * которая была days дней назад от указанной даты date.
+ * Дата принимается в формате YYYY-MM-DD, возвращается DD.MM.YYYY.
+ */
+let getDateAgo = function(date, days) {
+  var elDate = date.split('-');
+  var mydate = new Date(elDate[0], elDate[1] - 1, elDate[2]);
+  var newdate = new Date((mydate - 1000 * 60 * 60 * 24 * days));
+  var options = {year: 'numeric', day: 'numeric', month: 'numeric'};
+  let res = newdate.toLocaleString('uk-UA', options);
+  return res;
+};
+console.log(getDateAgo('2019-01-29', 1)); // 28.01.2019
+console.log(getDateAgo('2019-01-29', 2)); // 27.01.2019
+console.log(getDateAgo('2019-01-29', 365)); // 29.01.2018
+/*
  * #6
  *
- * Для созданных ранее объектов измените свойство used, используя аксессоры (геттер и сеттер).
- * - используйте текущий год либо непосредственно в своем коде, либо с помощью глобальной переменной, например, yearNow
- * - если год выпуска автомобиля отличается от текущего года, геттер used должен выводить текст 'used'
- * - если год выпуска автомобиля совпадает с текущим годом, геттер used должен выводить текст 'new'
- * - если сеттеру used присвоено значение 'new', при этом года выпуска автомобиля отличается от текущего года,
- * - необходимо изменить год выпуска автомобиля, установив в качестве значения текущий год
- * - если сеттеру used присвоено значение 'used', ничего делать не нужно
+ * Используя в качестве основы, объект car, описанный в прошлом занятии, создайте прототип Car,
+ * реализующий те же поля (#17.4) и методы(#17.5 и #17.6) у создаваемых объектов.
+ *
+ * Например:
+ * let car = new Car(2000, 'Lacetti', 'Chevrolet', 2010);
+ * let car2 = new Car(5000, 'FX50 AWD', 'Infinite', 2019);
+ *
+ * Способ создания прототипа не регламентирован.
+ * Объекты и их методы, созданные прототипом должны полностью соответствовать объектам из прошлого задания.
  */
-let info = function() {
-  let infoStr;
-  return infoStr = `${this.name} ${this.model}, ${this.engine}cc, year ${this.year}, ${this.used}`
-};
 let yearNow = new Date().getFullYear();
-let car = {
-  engine: 1600,
-  model: 'Getz',
-  name: 'Hyundai',
-  year: 2006,
-  get used () {
+
+// _______1 способ_______________
+// let Car = {
+//   сonstructor(engine, model, name, year) {
+//     this.engine = engine;
+//     this.model = model;
+//     this.name = name;
+//     this.year = year;
+    
+//     return this;
+//   },
+//   get used () {
+//     return this.year !== yearNow ? 'used' : 'new';
+//   },
+  
+//   set used (value) {
+//     if (value === 'new' && this.year < yearNow) 
+//       this.year = yearNow;
+//   },
+//   info() {
+//     let infoStr;
+//     return infoStr = `${this.name} ${this.model}, ${this.engine}cc, year ${this.year}, ${this.used}`;
+//   }
+// };
+// let car = Object.create(Car).constructor(1600,'Getz', 'Hyundai', 2006);
+// let car1 = Object.create(Car).constructor(3000, 'Q7', 'Audi', 2021);
+// let car2 = Object.create(Car).constructor(1600, 'Polo', 'Volkswagen', 2019);
+// let car3 = Object.create(Car).constructor(3000, 'Cayenne', 'Porsche', 2020);
+// __________2 способ_________________________
+let Car = function(engine, model, name, year) {
+  this.engine = engine;
+  this.model = model;
+  this.name = name;
+  this.year = year;
+};
+
+Car.prototype = {
+  get used() {
     return this.year !== yearNow ? 'used' : 'new';
   },
+  
   set used (value) {
     if (value === 'new' && this.year < yearNow) 
       this.year = yearNow;
   },
-  info,
-};
-let car1 = {
-  engine: 3000,
-  model: 'Q7',
-  name: 'Audi',
-  year: 2021,
-  get used () {
-    return this.year !== yearNow ? 'used' : 'new';
+  info: function () {
+    let infoStr;
+    return infoStr = `${this.name} ${this.model}, ${this.engine}cc, year ${this.year}, ${this.used}`;
   },
-  set used (value) {
-    if (value === 'new' && this.year < yearNow) 
-      this.year = yearNow;
-  },
-  info,
-};
-let car2 = {
-  engine: 1600,
-  model: 'Polo',
-  name: 'Volkswagen',
-  year: 2019,
-  get used () {
-    return this.year !== yearNow ? 'used' : 'new';
-  },
-  set used (value) {
-    if (value === 'new' && this.year < yearNow) 
-      this.year = yearNow;
-  },
-  info,
-};
-let car3 = {
-  engine: 3000,
-  model: 'Cayenne',
-  name: 'Porsche',
-  year: 2020,
-  get used () {
-    return this.year !== yearNow ? 'used' : 'new';
-  },
-  set used (value) {
-    if (value === 'new' && this.year < yearNow) 
-      this.year = yearNow;
-  },
-  info,
 };
 
-console.log('Task 4-6');
-
-console.log(car.info());
-// console.log(car1.info());
-// console.log(car2.info());
-// console.log(car3.info());
-
- // получить текущий год как число
-
-console.log(car.info()); // Chevrolet Lacetti, 2000cc, year 2010, used
-car.used;
-car.used = 'new';
-
-console.log(car.info()); // Chevrolet Lacetti, 2000cc, year 2019, new -- год изменен
-
-car.used = 'used';
-
-console.log(car.info()); // Chevrolet Lacetti, 2000cc, year 2019, new -- изменения не выполняются
-
-console.log(car2.info()); // Infinite FX50 AWD, 5000cc, year 2019, new
-
-car1.used = 'used';
-
-console.log(car1.info()); // Infinite FX50 AWD, 5000cc, year 2019, new -- изменения не выполняются
+let car = new Car(1600, 'Polo', 'Volkswagen', 2019);
+let car1 = new Car(3000, 'Cayenne', 'Porsche', 2020);
+let car2 = new Car(1600, 'Polo', 'Volkswagen', 2019);
+let car3 = new Car(3000, 'Cayenne', 'Porsche', 2020);
+console.log(car);
+console.log(car1);
+console.log(car2);
+console.log(car3);
+// let car = new Car(2000, 'Lacetti', 'Chevrolet', 2010);
+// let car2 = new Car(5000, 'FX50 AWD', 'Infinite', 2019);
+// console.log(car.info()); // chevrolet Lacetti, 2010cc, year 2010, used
+// car.used = 'new';
+// console.log(car.info()); // chevrolet Lacetti, 2019cc, year 2019, new -- год изменен
+// car.used = 'used';
+// console.log(car.info()); // chevrolet Lacetti, 2019cc, year 2019, new -- изменения не выполняются
+// console.log(car2.info()); // infinite FX50 AWD, 2019cc, year 2019, new
+// car.used = 'used';
+// console.log(car2.info()); // infinite FX50 AWD, 2019cc, year 2019, new -- изменения не выполняются
 
 /*
  * #7
- * Создайте функцию myMax(arr), которая в качестве параметра принимает
- * произвольный числовой массив и возвращает максимальное число из переданного ей массива.
- * В реализации функции должен быть применен метод Math.max() и apply().
- */
-var myMax = function(arr){
-  return Math.max.apply(null, arr);
-};
-let list = [12, 23, 100, 34, 56, 9, 233];
-console.log('Task 7');
-console.log(myMax(list)); // 233
-
-/*
- * #8
+ * Напишите функцию testPerformance(iterations, func) для тестирования производительности любых, переданных ей в качестве параметра функций.
+ * iterations – количество повторений для тестирования.
+ * func – тестируемая функция.
  *
- * Создайте функцию myMul(a, b), которая будет умножать числа а и b, возвращая результат.
+ * Если в качестве параметра передается что-либо кроме функции, тестирование не выполняется, возвращается 0.
  */
-
-/*
- * создайте функции myDouble(n), которая принимает один параметр и  удваивает его.
- * Использовать умножение или другие математические операции внутри функции – запрещено, только bind() и myMul().
- * Функция возвращает результат вычисления.
- */
-var myMul = (a, b) => a * b;
-
-console.log(myMul(2, 4));
-
-var myDouble = myMul.bind(null, 2);
-var myTriple = myMul.bind(null, 3);
-console.log('Task 8');
-// console.log(myDouble(3)); // = myMul(2, 3) = 6
-
-// console.log(myDouble(4)); // = myMul(2, 4) = 8
-
-// console.log(myDouble(5)); // = myMul(2, 5) = 10
-
-// // аналогичным образом создайте функцию myTriple(n), которая утраивает принимающий параметр, возвращая результат.
-
-// console.log(myTriple(3)); // = myMul(3, 3) = 9
-
-// console.log(myTriple(4)); // = myMul(3, 4) = 12
-
-// console.log(myTriple(5)); // = myMul(3, 5) = 15
-
-/*
- * #9
- *
- * Постройте функцию myUniq(arr), которая будет принимать произвольный массив
- * повторяющихся примитивных значений (например, имена пользователей или числа ).
- * Функция должна вернуть коллекцию уникальных значений.
- * В реализации разрешено использование set.
- * Любые условные операторы – запрещены и объекты.
- */
-
-let notUniqNums = [1, 1, 2, 3, 4, 5, 6, 7];
-
-let notUniqStrings = ['Bob', 'Kate', 'Jhon', 'Tom', 'Jhon', 'Kate', 'Tom', 'Bob', 'Jhon', 'Tom'];
-console.log('Task 9');
-var myUniq = function(arr) {
-  let setArr = new Set();
-  arr.forEach(element => {setArr.add(element)
-  });
-  return setArr;
+let testPerformance = function(iterations, func) {
+  if (typeof func !== 'function') return 0;
+  let startTime = new Date();
+  for (let i=0; i < iterations; i++) {
+    func();
+  }
+  return new Date() - startTime;
 };
-console.log(myUniq(notUniqNums));
+// данная функция необходима для корректного тестирования кода
+function test1() {
+  let str = myLongStr;
+  while (str.indexOf('o') !== -1) str = str.replace('o', '');
+  while (str.indexOf('a') !== -1) str = str.replace('a', '');
+  while (str.indexOf('e') !== -1) str = str.replace('e', '');
+  while (str.indexOf('u') !== -1) str = str.replace('u', '');
+  while (str.indexOf('i') !== -1) str = str.replace('i', '');
+}
 
-console.log(myUniq(notUniqStrings));
+// данная функция необходима для корректного тестирования кода
+function test2() {
+  const reg = new RegExp('[oaeui]', 'gui');
+
+  myLongStr.replace(reg, '');
+}
+
+// console.log(testPerformance(100, test1)); // time
+// console.log(testPerformance(100, test2)); // time
+// console.log(testPerformance(100, 12345)); // 0
+// console.log(testPerformance(100, wordsList(myLongStr, 'lore'))); // time
